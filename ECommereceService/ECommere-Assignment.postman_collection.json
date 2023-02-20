@@ -119,7 +119,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userId\" : 1 ,\r\n    \"couponCode\" : \"Default\",\r\n    \"paymentType\" : \"cash\"\r\n}",
+							"raw": "{\r\n    \"userId\" : 1,\r\n    \"couponCode\" : \"DefaultCouponCode10\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
