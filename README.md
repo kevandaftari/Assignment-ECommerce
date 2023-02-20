@@ -1,6 +1,8 @@
 # Assignment-ECommerce
 ECommerce BackEnd Assignment for UniBlox.
 
+**Postman Collection is added in the project.**
+
 Default Data : <br/>
    I have intialized default data required to run the APIs. <br/>
    It will automatically run when program starts. <br/>
