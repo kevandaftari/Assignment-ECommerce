@@ -29,10 +29,46 @@ The project contains below APIs:
                        }
                        
  2) Order/PlaceOrder : It empties the cart and places the order.
-                 Input : 
+ 
+       Input : 
                  
                         {
                              "userId" : 1 ,   // Id of the user for placing the order.
-                             "couponCode" : "Default", //  coupon code name. Remove this field if coupon is not applicable.
+                             "couponCode" : "DefaultCouponCode10", //  coupon code name. Remove this field if coupon is not applicable.
+                        }
+       
+       Output :  If Order is successful.
+    
+                        {
+                             "orderId": "10512a66-f785-4b3d-ba9c-fcf656ab9fbb",
+                             "userId": 1,
+                             "isDiscountApplied": true,
+                             "couponCodeName": "DefaultCouponCode10",
+                             "couponDisplayName": "DefaultCoupon10%",
+                             "discountPercentage": 10.0,
+                             "discountAmount": 6.0,
+                             "orderItemDetails": {
+                                 "numberOfItemsInOrder": 2,
+                                 "orderItems": [
+                                     {
+                                         "itemId": 1,
+                                         "itemName": "Default Product 1",
+                                         "itemDescription": "Product Description 1",
+                                         "itemPrice": 30.0,
+                                         "itemCount": 2,
+                                         "orderIdFK": "10512a66-f785-4b3d-ba9c-fcf656ab9fbb"
+                                     }
+                                 ],
+                                 "orderIdFK": "10512a66-f785-4b3d-ba9c-fcf656ab9fbb"
+                             },
+                             "grossAmount": 60.0,
+                             "finalPurchaseAmount": 54.0
                          }
-                     
+  
+  Output :  If Coupon Code is invalid.
+  
+                 Invalid Coupon Code or Coupon Code not Applicable for current order.
+                 
+  Output : If  Cart is empty.
+  
+                 Cart is Empty.Please Add minimum one Item.
