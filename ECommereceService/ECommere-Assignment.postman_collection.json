@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "c220a643-e82c-450b-919f-5bd4dc9b35ce",
+		"name": "ECommere-Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15114188"
+	},
+	"item": [
+		{
+			"name": "Admin Access APIs",
+			"item": [
+				{
+					"name": "GetListOfCoupons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5215/Coupon/GetListOfCoupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5215",
+							"path": [
+								"Coupon",
+								"GetListOfCoupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Coupon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"code\": \"TestCouponToAdd\",\r\n        \"displayName\": \"TestCoupon20%\",\r\n        \"discountPercentage\": 20,\r\n        \"orderFrequency\": 10\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5215/Coupon/Post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5215",
+							"path": [
+								"Coupon",
+								"Post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get MetaData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5215/MetaData/GetOrderMetaData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5215",
+							"path": [
+								"MetaData",
+								"GetOrderMetaData"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Access APIs",
+			"item": [
+				{
+					"name": "Add Item in cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : 1,\r\n    \"itemId\" : 1,\r\n    \"count\"  : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5215/Cart/AddItem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5215",
+							"path": [
+								"Cart",
+								"AddItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : 1 ,\r\n    \"couponCode\" : \"Default\",\r\n    \"paymentType\" : \"cash\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5215/Order/PlaceOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5215",
+							"path": [
+								"Order",
+								"PlaceOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
