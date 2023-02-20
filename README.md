@@ -9,6 +9,7 @@ The project contains below APIs:
                       ```
                      {
                         "code": "TestCouponToAdd",
+                        <br/>
                         "displayName": "TestCoupon20%",
                         "discountPercentage": 20,
                         "orderFrequency": 10
