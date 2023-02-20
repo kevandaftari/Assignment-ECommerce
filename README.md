@@ -26,13 +26,18 @@ The project contains below APIs:
 **User Access APIs**
 
 1) Cart/AddItem : It adds a single item to the cart. 
-                 Input : Body should be of following type.
+
+           Input : Body should be of following type.
                  
                        {
                           "userId" : 1,     // Id of the user for which item will be added in the cart.
                            "itemId" : 1,    // Id of the Item.
                            "count"  : 2     // how many quntity of the item you wish to add.
                        }
+                       
+           Output : If ItemId is invalid( item is not present in inventory system ) or count is more than itemRemaining Count in inventory.
+                        
+                        Item not found or request count of item is more than inventory
                        
  2) Order/PlaceOrder : It empties the cart and places the order.
  
