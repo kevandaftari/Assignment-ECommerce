@@ -2,10 +2,10 @@
 ECommerce BackEnd Assignment for UniBlox.
 
 Default Data :
-   I have intialized default data required to run the APIs.
-   It will automatically run when program starts.
-   Location : ECommereceService.Entity Project => EFCoreInMemoryDb.cs => void InitializeDefaulData() method.
-   If you want to change default data you can do it in this function.
+   I have intialized default data required to run the APIs. <br/>
+   It will automatically run when program starts. <br/>
+   Location : ECommereceService.Entity Project => EFCoreInMemoryDb.cs => void InitializeDefaulData() method. <br/>
+   If you want to change default data you can do it in this function. <br/>
 
 The project contains below APIs:
 
